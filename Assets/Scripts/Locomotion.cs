@@ -21,4 +21,14 @@ public class Locomotion : MonoBehaviour
     {
         
     }
+
+    private void OnTriggerEnter(Collider other)
+    {
+        if (other.gameObject.tag == "Person")
+        {
+            // Transfer infection
+            Debug.Log("Infection spreads");
+        }
+        Debug.Log("Overlap");
+    }
 }
