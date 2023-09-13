@@ -631,6 +631,14 @@ PrefabInstance:
       value: 0
       objectReference: {fileID: 0}
     - target: {fileID: 8358958006321993219, guid: 6d12eb330c3e119419656c6592523c3e, type: 3}
+      propertyPath: isHost
+      value: 1
+      objectReference: {fileID: 0}
+    - target: {fileID: 8358958006321993219, guid: 6d12eb330c3e119419656c6592523c3e, type: 3}
+      propertyPath: InfectedMat
+      value: 
+      objectReference: {fileID: 2100000, guid: d2ccd34982c3fc44c99d488488c6df85, type: 2}
+    - target: {fileID: 8358958006321993219, guid: 6d12eb330c3e119419656c6592523c3e, type: 3}
       propertyPath: destination
       value: 
       objectReference: {fileID: 910932458}
