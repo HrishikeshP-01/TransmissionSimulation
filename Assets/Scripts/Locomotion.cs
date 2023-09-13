@@ -8,6 +8,10 @@ public class Locomotion : MonoBehaviour
     NavMeshAgent agent;
     [SerializeField]
     private Transform destination;
+    [SerializeField]
+    bool isHost;
+    [SerializeField]
+    Material InfectedMat;
     
     // Start is called before the first frame update
     void Start()
@@ -27,8 +31,17 @@ public class Locomotion : MonoBehaviour
         if (other.gameObject.tag == "Person")
         {
             // Transfer infection
-            Debug.Log("Infection spreads");
+            // Debug.Log("Infection spreads");
+            getInfected();
         }
         //Debug.Log("Overlap");
+    }
+
+    void getInfected()
+    {
+        if(isHost)
+        {
+            gameObject.GetComponent<MeshRenderer>().material = InfectedMat;
+        }
     }
 }
