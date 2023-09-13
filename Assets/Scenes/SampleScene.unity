@@ -409,6 +409,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Person (1)
       objectReference: {fileID: 0}
+    - target: {fileID: 550952891343766503, guid: 6d12eb330c3e119419656c6592523c3e, type: 3}
+      propertyPath: m_TagString
+      value: Person
+      objectReference: {fileID: 0}
     - target: {fileID: 695074802325729530, guid: 6d12eb330c3e119419656c6592523c3e, type: 3}
       propertyPath: m_Height
       value: 3
@@ -566,6 +570,10 @@ PrefabInstance:
       propertyPath: m_Name
       value: Person
       objectReference: {fileID: 0}
+    - target: {fileID: 550952891343766503, guid: 6d12eb330c3e119419656c6592523c3e, type: 3}
+      propertyPath: m_TagString
+      value: Person
+      objectReference: {fileID: 0}
     - target: {fileID: 695074802325729530, guid: 6d12eb330c3e119419656c6592523c3e, type: 3}
       propertyPath: m_Height
       value: 3
@@ -592,7 +600,7 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: 6292444191944153186, guid: 6d12eb330c3e119419656c6592523c3e, type: 3}
       propertyPath: m_LocalPosition.z
-      value: 0
+      value: -1.56
       objectReference: {fileID: 0}
     - target: {fileID: 6292444191944153186, guid: 6d12eb330c3e119419656c6592523c3e, type: 3}
       propertyPath: m_LocalRotation.w
