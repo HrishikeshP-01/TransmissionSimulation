@@ -135,3 +135,6 @@ MonoBehaviour:
   m_Name: 
   m_EditorClassIdentifier: 
   destination: {fileID: 0}
+  isHost: 0
+  InfectedMat: {fileID: 2100000, guid: d2ccd34982c3fc44c99d488488c6df85, type: 2}
+  SickMat: {fileID: 2100000, guid: a1e1d1db7df20e3418da640c2a98ca6a, type: 2}
