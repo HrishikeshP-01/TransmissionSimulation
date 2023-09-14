@@ -35,6 +35,7 @@ public class Locomotion : MonoBehaviour
             // Transfer infection
             // Debug.Log("Infection spreads");
             getInfected();
+            getSick();
         }
         //Debug.Log("Overlap");
     }
