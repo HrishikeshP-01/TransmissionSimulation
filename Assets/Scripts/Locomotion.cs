@@ -7,7 +7,7 @@ public class Locomotion : MonoBehaviour
 {
     NavMeshAgent agent;
     [SerializeField]
-    private Transform destination;
+    private Transform[] destinations;
     [SerializeField]
     bool isHost;
     [SerializeField]
@@ -19,7 +19,7 @@ public class Locomotion : MonoBehaviour
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(destination.position);
+        agent.SetDestination(destinations[0].position);
     }
 
     // Update is called once per frame
