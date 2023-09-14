@@ -12,6 +12,8 @@ public class Locomotion : MonoBehaviour
     bool isHost;
     [SerializeField]
     Material InfectedMat;
+    [SerializeField]
+    Material SickMat;
     
     // Start is called before the first frame update
     void Start()
@@ -42,6 +44,14 @@ public class Locomotion : MonoBehaviour
         if(isHost)
         {
             gameObject.GetComponent<MeshRenderer>().material = InfectedMat;
+        }
+    }
+
+    void getSick()
+    {
+        if(!isHost)
+        {
+            gameObject.GetComponent<MeshRenderer>().material = SickMat;
         }
     }
 }
