@@ -7,6 +7,7 @@ public class Locomotion : MonoBehaviour
 {
     NavMeshAgent agent;
     [SerializeField]
+    private Transform[] totalDestinationPts;
     private Transform[] destinations;
     [SerializeField]
     bool isHost;
@@ -21,6 +22,8 @@ public class Locomotion : MonoBehaviour
     // Start is called before the first frame update
     void Start()
     {
+        destinations = new Transform[totalDestinationPts.Length];
+        getRandomDPs();
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(destinations[targetIndex].position);
     }
@@ -60,6 +63,14 @@ public class Locomotion : MonoBehaviour
         if(!isHost)
         {
             gameObject.GetComponent<MeshRenderer>().material = SickMat;
+        }
+    }
+
+    void getRandomDPs()
+    {
+        for(int i=0;i<totalDestinationPts.Length;i++)
+        {
+            destinations[i] = totalDestinationPts[Mathf.RoundToInt(Random.Range(0, totalDestinationPts.Length))];
         }
     }
 }
