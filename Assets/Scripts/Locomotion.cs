@@ -14,18 +14,25 @@ public class Locomotion : MonoBehaviour
     Material InfectedMat;
     [SerializeField]
     Material SickMat;
+
+    Vector3 targetPt;
+    int targetIndex = 0;
     
     // Start is called before the first frame update
     void Start()
     {
         agent = GetComponent<NavMeshAgent>();
-        agent.SetDestination(destinations[0].position);
+        agent.SetDestination(destinations[targetIndex].position);
     }
 
     // Update is called once per frame
     void Update()
     {
-        
+       if(Vector3.Distance(transform.position, targetPt) < 1.0f)
+        {
+            targetPt = destinations[(targetIndex + 1) % destinations.Length].position;
+            agent.SetDestination(targetPt);
+        } 
     }
 
     private void OnTriggerEnter(Collider other)
