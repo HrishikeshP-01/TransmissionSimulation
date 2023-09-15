@@ -122,7 +122,7 @@ NavMeshSettings:
     preserveTilesOutsideBounds: 0
     debug:
       m_Flags: 0
-  m_NavMeshData: {fileID: 0}
+  m_NavMeshData: {fileID: 23800000, guid: c117295064e1a6a4caef639f6a9b5f4b, type: 2}
 --- !u!1001 &8041445
 PrefabInstance:
   m_ObjectHideFlags: 0
