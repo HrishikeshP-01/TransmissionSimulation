@@ -27,7 +27,11 @@ public class Locomotion : MonoBehaviour
         destinations = new Transform[totalDestinationPts.Length];
         getRandomDPs();
         isHost = Randomizer();
-        
+        if (carriesInfection)
+        {
+            if (isHost) { GetComponent<MeshRenderer>().material = InfectedMat; }
+            else { GetComponent<MeshRenderer>().material = SickMat; }
+        }
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(destinations[targetIndex].position);
     }
