@@ -9,7 +9,6 @@ public class Locomotion : MonoBehaviour
     [SerializeField]
     private Transform[] totalDestinationPts;
     private Transform[] destinations;
-    [SerializeField]
     bool isHost;
     [SerializeField]
     Material InfectedMat;
@@ -72,5 +71,11 @@ public class Locomotion : MonoBehaviour
         {
             destinations[i] = totalDestinationPts[Mathf.RoundToInt(Random.Range(0, totalDestinationPts.Length))];
         }
+    }
+
+    bool Randomizer()
+    {
+        if (Random.Range(1, 10) < 2) { return true; }
+        return false;
     }
 }
