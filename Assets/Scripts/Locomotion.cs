@@ -12,6 +12,8 @@ public class Locomotion : MonoBehaviour
     [SerializeField]
     bool isHost;
     [SerializeField]
+    bool carriesInfection;
+    [SerializeField]
     Material InfectedMat;
     [SerializeField]
     Material SickMat;
@@ -25,6 +27,7 @@ public class Locomotion : MonoBehaviour
         destinations = new Transform[totalDestinationPts.Length];
         getRandomDPs();
         isHost = Randomizer();
+        
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(destinations[targetIndex].position);
     }
@@ -41,10 +44,12 @@ public class Locomotion : MonoBehaviour
 
     private void OnTriggerEnter(Collider other)
     {
-        if (other.gameObject.tag == "Person")
+        if (other.gameObject.tag != "Person") { Debug.Log("X"); return; }
+        if (other.gameObject.GetComponent<Locomotion>().carriesInfection)
         {
             // Transfer infection
-            // Debug.Log("Infection spreads");
+            Debug.Log("Infection spreads");
+            carriesInfection = true;
             getInfected();
             getSick();
         }
