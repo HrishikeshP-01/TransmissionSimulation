@@ -9,6 +9,7 @@ public class Locomotion : MonoBehaviour
     [SerializeField]
     private Transform[] totalDestinationPts;
     private Transform[] destinations;
+    [SerializeField]
     bool isHost;
     [SerializeField]
     Material InfectedMat;
@@ -23,6 +24,7 @@ public class Locomotion : MonoBehaviour
     {
         destinations = new Transform[totalDestinationPts.Length];
         getRandomDPs();
+        isHost = Randomizer();
         agent = GetComponent<NavMeshAgent>();
         agent.SetDestination(destinations[targetIndex].position);
     }
